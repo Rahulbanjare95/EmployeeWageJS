@@ -1,10 +1,14 @@
 let isPresent = 1;
 let EMP_RATE_PER_HR = 20;
+let IS_PART_TIME = 1;
+let IS_FULL_TIME = 2;
 let empHrs = 0;
 let empWage = 0;
 
-let checkPresentOrAbsent = Math.floor(Math.random() * 10) % 2;
-if (checkPresentOrAbsent == 1)
+let checkPresentOrAbsent = Math.floor(Math.random() * 10) % 3;
+if (checkPresentOrAbsent == IS_PART_TIME)
+	empHrs = 4;
+else if (checkPresentOrAbsent == IS_FULL_TIME)
 	empHrs = 8;
 else
 	empHrs = 0;
